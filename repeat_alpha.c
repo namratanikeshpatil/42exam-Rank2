@@ -12,23 +12,23 @@ void    repeat_alpha( char *str)
     while( *str != '\0')
     {
         int i ;
-        if( *str >= 65 && *str <= 90)
+        char c ;
+        c = *str ;
+        if( c >= 65 && c <= 90)
         {
-            i = *str - 64;
-            ft_putchar(*str,i);
-            str++;
+            i = c - 64;
+            ft_putchar(c,i);
         }
-        else if( *str >= 97 && *str <= 122)
+        else if( c >= 97 && c <= 122)
         {
-            i = *str - 96;
-            ft_putchar(*str,i);
-            str++;
+            i = c - 96;
+            ft_putchar(c,i);
         }
         else
         {
-            ft_putchar(*str, 1);
-            str++;
+            ft_putchar(c, 1);
         }
+        str++;
     }
 } 
 
